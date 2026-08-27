@@ -11,7 +11,8 @@
 <title>GRF000113008 Tactical Decision Tool</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000000'/%3E%3Crect x='15' y='60' width='15' height='25' fill='%23d4af6a'/%3E%3Crect x='35' y='45' width='15' height='40' fill='%23d4af6a'/%3E%3Crect x='55' y='28' width='15' height='57' fill='%23d4af6a'/%3E%3Crect x='75' y='15' width='15' height='70' fill='%23d4af6a'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%23000000'/%3E%3Crect x='15' y='60' width='15' height='25' fill='%23d4af6a'/%3E%3Crect x='35' y='45' width='15' height='40' fill='%23d4af6a'/%3E%3Crect x='55' y='28' width='15' height='57' fill='%23d4af6a'/%3E%3Crect x='75' y='15' width='15' height='70' fill='%23d4af6a'/%3E%3C/svg%3E">
-<!-- Font list (theming overhaul, item #14 fix): the app is fully offline/on-device
+<link rel="manifest" href="/MF_Tool/manifest.json"> <link rel="apple-touch-icon" sizes="180x180" href="/MF_Tool/icons/icon-180.png">
+     <!-- Font list (theming overhaul, item #14 fix): the app is fully offline/on-device
      only, so all fonts below are genuinely distinct OS/web-safe stacks (Arial,
      Georgia, Times New Roman, Consolas, etc. -- fonts that actually ship with
      Windows/macOS/Linux/Android/iOS), never a network font file. No Google
@@ -19261,5 +19262,6 @@ window.addEventListener("resize", () => {
 });
 
 </script>
+<script> if ("serviceWorker" in navigator) { window.addEventListener("load", () => { navigator.serviceWorker.register("/MF_Tool/sw.js").catch((err) => { console.warn("Service worker registration failed:", err); }); }); } </script>
 </body>
 </html>
